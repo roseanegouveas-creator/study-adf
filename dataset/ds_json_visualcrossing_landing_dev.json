@@ -11,6 +11,9 @@
 			},
 			"date": {
 				"type": "string"
+			},
+			"file_name": {
+				"type": "string"
 			}
 		},
 		"folder": {
@@ -21,6 +24,14 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().file_name",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@concat(\n    'landing/visualcrossing/',\n    dataset().city,\n    '/year=', formatDateTime(dataset().date, 'yyyy'),\n    '/month=', formatDateTime(dataset().date, 'MM'),\n    '/day=', formatDateTime(dataset().date, 'dd')\n)",
+					"type": "Expression"
+				},
 				"fileSystem": "study-landing-dev-001"
 			}
 		},
