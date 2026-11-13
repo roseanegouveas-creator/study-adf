@@ -124,7 +124,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "date",
-					"value": ""
+					"value": "@utcnow('yyy-MM-dd')"
 				}
 			}
 		],
