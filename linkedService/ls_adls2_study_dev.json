@@ -1,0 +1,10 @@
+{
+	"name": "ls_adls2_study_dev",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://sastudydevwest200222.dfs.core.windows.net/"
+		}
+	}
+}
