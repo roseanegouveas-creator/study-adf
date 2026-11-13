@@ -1,0 +1,10 @@
+{
+	"name": "ls_akv_study_dev",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://kv-study-dev-wastus2-001.vault.azure.net/"
+		}
+	}
+}
