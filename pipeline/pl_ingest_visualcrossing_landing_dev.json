@@ -90,7 +90,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"method": "GET",
-					"url": "https://https://kv-study-dev-wastus2-001.vault.azure.net/secrets/visualcrossing-api-key-dev/4a9e386ac41544a89c90308eff7abbae?api-version=2025-07-01",
+					"url": "https://kv-study-dev-wastus2-001.vault.azure.net/secrets/visualcrossing-api-key-dev/4a9e386ac41544a89c90308eff7abbae?api-version=2025-07-01",
 					"authentication": {
 						"type": "MSI",
 						"resource": "https://vault.azure.net/.default"
