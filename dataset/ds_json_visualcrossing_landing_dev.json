@@ -1,0 +1,29 @@
+{
+	"name": "ds_json_visualcrossing_landing_dev",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls2_study_dev",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"city": {
+				"type": "string"
+			},
+			"date": {
+				"type": "string"
+			}
+		},
+		"folder": {
+			"name": "VisualCrossing"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "study-landing-dev-001"
+			}
+		},
+		"schema": {}
+	}
+}
