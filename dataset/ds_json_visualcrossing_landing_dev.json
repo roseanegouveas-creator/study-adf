@@ -29,7 +29,7 @@
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "@concat(\n    'landing/visualcrossing/',\n    dataset().city,\n    '/year=', formatDateTime(dataset().date, 'yyyy'),\n    '/month=', formatDateTime(dataset().date, 'MM'),\n    '/day=', formatDateTime(dataset().date, 'dd')\n)",
+					"value": "@tolower(\nconcat(\n    'landing/visualcrossing/',\n    dataset().city,\n    '/year=', formatDateTime(dataset().date, 'yyyy'),\n    '/month=', formatDateTime(dataset().date, 'MM'),\n    '/day=', formatDateTime(dataset().date, 'dd')\n))",
 					"type": "Expression"
 				},
 				"fileSystem": "study-landing-dev-001"
