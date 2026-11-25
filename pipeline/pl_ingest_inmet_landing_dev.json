@@ -131,6 +131,14 @@
 										"ano": {
 											"value": "@item()",
 											"type": "Expression"
+										},
+										"file_name": {
+											"value": "@toLower(concat('study_', pipeline().parameters.id_estacao, '_',\nstring(item()), formatDateTime(utcNow(), 'yyyyMMddHHmmss'), '.csv'))",
+											"type": "Expression"
+										},
+										"id_estacao": {
+											"value": "@pipeline().parameters.id_estacao",
+											"type": "Expression"
 										}
 									}
 								}

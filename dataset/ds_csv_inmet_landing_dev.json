@@ -11,6 +11,9 @@
 			},
 			"file_name": {
 				"type": "string"
+			},
+			"id_estacao": {
+				"type": "string"
 			}
 		},
 		"folder": {
@@ -26,7 +29,7 @@
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "@toLower(concat('landing/inmet/ano=', dataset().ano))",
+					"value": "@toLower(\n    concat(\n        'landing/inmet/',\n        dataset().id_estacao,\n        '/ano=', dataset().ano))",
 					"type": "Expression"
 				},
 				"fileSystem": "study-landing-dev-001"
