@@ -22,8 +22,64 @@
 						"resource": "https://vault.azure.net/"
 					}
 				}
+			},
+			{
+				"name": "set_years_list",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "web_get_apikey",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "year_list",
+					"value": {
+						"value": "@range(pipeline().parameters.startYear, add(sub(pipeline().parameters.endYear, pipeline().parameters.startYear), 1))",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "foreach_ano",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "set_years_list",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"batchCount": 5
+				}
 			}
 		],
+		"parameters": {
+			"id_estacao": {
+				"type": "string"
+			},
+			"startYear": {
+				"type": "int"
+			},
+			"endYear": {
+				"type": "int"
+			}
+		},
+		"variables": {
+			"year_list": {
+				"type": "Array"
+			}
+		},
 		"folder": {
 			"name": "INMET"
 		},
